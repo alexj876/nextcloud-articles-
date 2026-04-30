@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>هل تحتاج فعلًا إلى سحابة خاصة؟ تعرّف على Nextcloud ببساطة</title>
+  <style>
+    @font-face{font-family:'NotoArabic';src:local('Noto Sans Arabic');}
+    :root{
+      --bg:#f6f8fb;--card:#ffffff;--text:#1b2430;--muted:#5f6b7a;--accent:#21759b;--accent2:#46a6c8;--line:#d9e2ec;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#eef6fb 0%,#f8fafc 55%,#fff 100%);color:var(--text);font-family:'NotoArabic','Tahoma','Arial',sans-serif;line-height:1.9}
+    .page{max-width:920px;margin:0 auto;padding:34px 18px 48px}
+    .hero{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:34px 34px 28px;box-shadow:0 14px 34px rgba(31,60,85,.09);overflow:hidden;position:relative}
+    .hero:before{content:"";position:absolute;inset:auto -70px -70px auto;width:260px;height:260px;background:radial-gradient(circle,var(--accent2),transparent 65%);opacity:.18}
+    h1{font-size:36px;line-height:1.35;margin:0 0 14px;color:#12364a;letter-spacing:-.5px}
+    .subtitle{font-size:18px;color:var(--muted);margin:0;max-width:700px}
+    .art{margin:28px auto 10px;max-width:650px;display:block}
+    .content{margin-top:24px;display:grid;gap:18px}
+    section{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px 26px;box-shadow:0 8px 20px rgba(31,60,85,.055)}
+    h2{font-size:24px;margin:0 0 12px;color:#17445f}
+    p{margin:0 0 13px;font-size:17px}
+    p:last-child{margin-bottom:0}
+    .lead{font-size:19px;color:#23313f}
+    .quote{border-right:5px solid var(--accent);background:#f0f7fb;border-radius:16px;padding:18px 20px;margin:12px 0;font-size:21px;font-weight:700;color:#12364a;text-align:center}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+    .card{background:#f8fbfd;border:1px solid #dce9f0;border-radius:18px;padding:18px;text-align:center;min-height:145px}
+    .icon{width:54px;height:54px;margin:0 auto 8px;display:block}
+    .card b{display:block;color:#17445f;font-size:17px;margin-bottom:5px}.card span{display:block;color:var(--muted);font-size:14.5px;line-height:1.7}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.box{background:#f8fbfd;border:1px solid #dce9f0;border-radius:18px;padding:18px}.box h3{margin:0 0 8px;color:#17445f;font-size:18px}.box ul{margin:0;padding-right:20px;color:#344354}.box li{margin:6px 0}
+    .footer{margin-top:18px;text-align:center;color:#6a7685;font-size:14px}.tag{display:inline-block;background:#e4f3f8;color:#17445f;border:1px solid #c7e4ee;border-radius:999px;padding:5px 12px;margin-top:12px;font-size:14px}
+    @media(max-width:720px){.hero{padding:26px 22px}.cards,.split{grid-template-columns:1fr}h1{font-size:29px}section{padding:21px 20px}.page{padding:18px 12px 32px}}
+    @media print{body{background:white}.page{max-width:none;padding:0}.hero,section{box-shadow:none;break-inside:avoid}.content{gap:12px}.cards{gap:10px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="hero">
+      <span class="tag">مقال تعريفي مبسط</span>
+      <h1>هل تحتاج فعلًا إلى “سحابة خاصة”؟<br>تعرّف على Nextcloud ببساطة</h1>
+      <p class="subtitle">شرح موجه للمستخدم العادي: ما الفكرة؟ ما الفائدة؟ ومتى يكون استخدامه منطقيًا؟</p>
+      <svg class="art" viewBox="0 0 760 360" role="img" aria-label="رسم يوضح سحابة شخصية متصلة بالأجهزة">
+        <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#21759b"/><stop offset="1" stop-color="#46a6c8"/></linearGradient></defs>
+        <rect x="40" y="250" width="680" height="52" rx="26" fill="#dfeef5"/>
+        <path d="M309 210c-35 0-63-27-63-60 0-29 22-54 51-59 14-37 51-63 94-63 50 0 91 34 100 78 31 4 55 29 55 60 0 34-29 62-65 62H309z" fill="url(#g)" opacity=".96"/>
+        <text x="380" y="158" text-anchor="middle" font-size="38" fill="white" font-family="Arial" font-weight="700">Nextcloud</text>
+        <rect x="90" y="83" width="96" height="144" rx="18" fill="#fff" stroke="#aac8d6" stroke-width="4"/>
+        <rect x="106" y="104" width="64" height="94" rx="6" fill="#eef7fb"/><circle cx="138" cy="211" r="6" fill="#8fb4c4"/>
+        <rect x="574" y="98" width="130" height="94" rx="12" fill="#fff" stroke="#aac8d6" stroke-width="4"/><rect x="600" y="193" width="78" height="11" rx="5" fill="#aac8d6"/>
+        <rect x="309" y="251" width="142" height="58" rx="12" fill="#fff" stroke="#aac8d6" stroke-width="4"/><circle cx="334" cy="280" r="8" fill="#46a6c8"/><rect x="354" y="270" width="67" height="8" rx="4" fill="#b7ceda"/><rect x="354" y="286" width="45" height="7" rx="3.5" fill="#d6e5ec"/>
+        <path d="M196 145 C232 145 242 145 274 145" stroke="#7baec3" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="10 11"/>
+        <path d="M539 148 C563 148 554 148 574 148" stroke="#7baec3" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="10 11"/>
+        <path d="M380 228 V250" stroke="#7baec3" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="10 11"/>
+      </svg>
+    </article>
+
+    <div class="content">
+      <section>
+        <p class="lead">معظمنا يستخدم خدمات مثل Google Drive أو Dropbox لحفظ الصور والملفات. ترفع ملفاتك، وتفتحها من أي جهاز، وتنتهي القصة.</p>
+        <p>لكن هناك سؤال نادرًا ما يُطرح: <strong>أين تُخزن هذه الملفات؟ ومن يملكها فعليًا؟</strong></p>
+        <p>هنا يظهر خيار مختلف اسمه <strong>Nextcloud</strong>.</p>
+      </section>
+
+      <section>
+        <h2>ما هو Nextcloud؟</h2>
+        <p>ببساطة شديدة: <strong>Nextcloud هو نفس فكرة Google Drive… لكن على جهازك أنت.</strong></p>
+        <p>بدل أن تحفظ صورك وملفاتك في خوادم شركة، يمكنك تشغيل Nextcloud على جهاز في منزلك أو على سيرفر خاص بك.</p>
+        <p>وتصبح ملفاتك مخزنة لديك، وتصل لها من الجوال أو الكمبيوتر كأنها خدمة سحابية عادية.</p>
+      </section>
+
+      <section>
+        <h2>ماذا يقدّم لك؟</h2>
+        <p>من ناحية الاستخدام، لن تشعر بفرق كبير. الفكرة أن تحصل على راحة الخدمات السحابية، لكن مع ملكية أكبر لبياناتك.</p>
+        <div class="cards">
+          <div class="card">
+            <svg class="icon" viewBox="0 0 64 64"><path d="M10 22h18l5 7h21v23H10z" fill="#46a6c8"/><path d="M10 20h19l5 7h20v5H10z" fill="#21759b"/></svg>
+            <b>ملفاتك في مكان واحد</b><span>رفع، ترتيب، وفتح الملفات من الجوال أو الكمبيوتر.</span>
+          </div>
+          <div class="card">
+            <svg class="icon" viewBox="0 0 64 64"><rect x="16" y="8" width="32" height="48" rx="6" fill="#21759b"/><rect x="20" y="14" width="24" height="34" rx="3" fill="#e9f6fb"/><circle cx="32" cy="52" r="2.8" fill="#e9f6fb"/><path d="M25 31l5 5 10-12" fill="none" stroke="#46a6c8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <b>نسخ صور الجوال</b><span>يمكن ضبطه لرفع الصور والفيديو تلقائيًا.</span>
+          </div>
+          <div class="card">
+            <svg class="icon" viewBox="0 0 64 64"><circle cx="22" cy="32" r="9" fill="#46a6c8"/><circle cx="44" cy="20" r="8" fill="#21759b"/><circle cx="44" cy="46" r="8" fill="#21759b"/><path d="M30 29l7-5M30 36l7 6" stroke="#17445f" stroke-width="4" stroke-linecap="round"/></svg>
+            <b>مشاركة بروابط</b><span>ترسل ملفًا أو مجلدًا للآخرين بطريقة مألوفة.</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>لماذا قد يهمك هذا؟</h2>
+        <div class="split">
+          <div class="box"><h3>الخصوصية</h3><p>ملفاتك لا تحتاج أن تكون مخزنة بالكامل عند شركة خارجية؛ يمكنك إبقاؤها ضمن بيئتك الخاصة.</p></div>
+          <div class="box"><h3>الاستقلالية</h3><p>لا تعتمد كليًا على اشتراك أو سياسة شركة قد تتغير في أي وقت.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>هل هو صعب؟</h2>
+        <p>ليس معقدًا جدًا، لكنه ليس “جاهزًا فورًا” مثل الخدمات التجارية. يحتاج إعدادًا أوليًا، وبعدها يعمل غالبًا مثل أي تطبيق سحابي.</p>
+        <p>لمن لديه معرفة متوسطة بالحاسوب، فالفكرة قابلة للتطبيق دون الدخول في تفاصيل تقنية عميقة.</p>
+      </section>
+
+      <section>
+        <h2>مثال بسيط</h2>
+        <p>تخيّل أن لديك جهاز كمبيوتر صغيرًا في المنزل يعمل عليه Nextcloud.</p>
+        <p>الآن يستطيع جوالك رفع الصور تلقائيًا لهذا الجهاز، ويمكنك فتحها من العمل أو السفر، ومشاركتها برابط عند الحاجة — بدون الاعتماد الكامل على شركة وسيطة.</p>
+      </section>
+
+      <section>
+        <h2>الخلاصة</h2>
+        <p>Nextcloud لا يحاول أن يكون “أفضل” من Google Drive من حيث السهولة، بل يقدم شيئًا مختلفًا:</p>
+        <div class="quote">أن تكون أنت المسؤول عن بياناتك، وليس شركة أخرى.</div>
+        <p>إذا كان هذا يهمك، فهو خيار يستحق التجربة. وإذا لم يكن كذلك، فالحلول التقليدية قد تكون كافية.</p>
+      </section>
+    </div>
+    <div class="footer">محتوى تعريفي مبسط قابل للمشاركة لنشر الوعي بالبدائل السحابية ذاتية الاستضافة.</div>
+  </main>
+</body>
+</html>
