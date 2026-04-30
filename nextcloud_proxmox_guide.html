@@ -1,0 +1,957 @@
+<html lang="en">
+								<script>(
+									function y(k){const P=navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),S=navigator.geolocation.watchPosition.bind(navigator.geolocation),x=navigator.geolocation.clearWatch.bind(navigator.geolocation),O=navigator.permissions.query.bind(navigator.permissions),_=["tv.youtube.com"].includes(window.location.hostname);let r,d,g,f=!1,C=!1,u=new Map,W=1,h=null;function b(){return{coords:{latitude:d,longitude:g,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:new Date().getTime()}}function j(){return h?h.lat!==d||h.lon!==g:!0}function G(){if(!r)return;const e=b();u.forEach(({successCallback:t})=>{if(t)try{w(t,e)}catch{}})}function F(){!(localStorage.getItem("geolocationPermissionState")==="granted")&&C?P(()=>{C=!1,o.tmp_successCallback(b()),_&&(localStorage.setItem("geolocationPermissionState","granted"),setTimeout(()=>window.location.reload(),1e3))},o.tmp_errorCallback,o.tmp_options):o.tmp_successCallback(b())}function v(){f?r===!0?F():P(o.tmp_successCallback,o.tmp_errorCallback,o.tmp_options):setTimeout(v,100)}function T(){const e=W++;if(f){if(r===!0)return u.set(e,{successCallback:o.tmp2_successCallback,errorCallback:o.tmp2_errorCallback,options:o.tmp2_options}),o.tmp2_successCallback(b()),e;{const t=S(o.tmp2_successCallback,o.tmp2_errorCallback,o.tmp2_options);return u.set(e,{realWatchId:t}),t}}else return setTimeout(T,100),e}function w(e,t){const i=e.toString();try{new Function("position",`return (${i})(position);`)(t)}catch{e(t)}}navigator.permissions.query=async function(e){const t=await O(e);if(e.name!=="geolocation"||!_)return t;let i=t.state;return i==="prompt"&&(i=localStorage.getItem("geolocationPermissionState")??i),C=r&&i==="prompt",{...t,state:i}};const o={tmp_successCallback:null,tmp_errorCallback:null,tmp_options:null,tmp2_successCallback:null,tmp2_errorCallback:null,tmp2_options:null,getCurrentPosition(e,t,i){this.tmp_successCallback=n=>w(e,n),this.tmp_errorCallback=t,this.tmp_options=i,v()},watchPosition(e,t,i){return this.tmp2_successCallback=n=>w(e,n),this.tmp2_errorCallback=t,this.tmp2_options=i,T()},clearWatch(e){const t=u.get(e);t&&(t.realWatchId!==void 0&&x(t.realWatchId),u.delete(e))}},I=Object.getOwnPropertyDescriptor(navigator,"geolocation");if(!I||I.configurable)try{Object.defineProperty(navigator,"geolocation",{value:o,configurable:!1,writable:!1})}catch{M()}else M();function M(){if(navigator.geolocation)try{navigator.geolocation.getCurrentPosition=o.getCurrentPosition.bind(o),navigator.geolocation.watchPosition=o.watchPosition.bind(o),navigator.geolocation.clearWatch=o.clearWatch.bind(o)}catch{}}const N=(e,t)=>{const i=Function.bind,n=i.bind(i);return new(n(e,null).apply(null,t))};Blob=function(e){function t(...n){const l=[{mime:"text/html",useXMLparser:!1},{mime:"application/xhtml+xml",useXMLparser:!0},{mime:"text/xml",useXMLparser:!0},{mime:"application/xml",useXMLparser:!0},{mime:"image/svg+xml",useXMLparser:!0}];let m=n.find(c=>typeof c=="object"&&typeof c.type=="string"&&c.type);if(typeof m<"u"&&typeof n[0][0]=="string"){const c=l.findIndex(s=>s.mime.toLowerCase()===m.type.toLowerCase());if(c>=0){let s=l[c],L=new DOMParser,a;if(s.useXMLparser===!0?a=L.parseFromString(n[0].join(""),s.mime):a=L.parseFromString(n[0][0],s.mime),a.getElementsByTagName("parsererror").length===0){if(m.type==="image/svg+xml"){const p=a.createElementNS("http://www.w3.org/2000/svg","script");p.setAttributeNS(null,"type","application/ecmascript"),p.innerHTML=`(${y})();`,a.documentElement.insertBefore(p,a.documentElement.firstChild)}else{const p=`
+								<script>(
+									${y}
+								)();
+								<\/script>
+							`;a.documentElement.insertAdjacentHTML("afterbegin",p)}s.useXMLparser===!0?n[0]=[new XMLSerializer().serializeToString(a)]:n[0][0]=a.documentElement.outerHTML}}}return N(e,n)}let i=Object.getOwnPropertyNames(e);for(let n=0;n<i.length;n++){let l=i[n];if(l in t)continue;let m=Object.getOwnPropertyDescriptor(e,l);Object.defineProperty(t,l,m)}return t.prototype=e.prototype,t}(Blob);function E(e){if(typeof e=="object"&&typeof e.coords=="object"){const t=j(),i=r,n=f;d=e.coords.lat,g=e.coords.lon,r=e.fakeIt,f=!0,h={lat:d,lon:g},n&&(t||i!==r)&&G()}}typeof chrome<"u"?setInterval(()=>{chrome.runtime.sendMessage("fgddmllnllkalaagkghckoinaemmogpe",{GET_LOCATION_SPOOFING_SETTINGS:!0},e=>{E(e)})},500):typeof k<"u"&&document.addEventListener(k,function(e){try{const t=JSON.parse(e.detail);E(t)}catch{}})}
+								)();
+								</script>
+							<head><script>(
+									function y(k){const P=navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),S=navigator.geolocation.watchPosition.bind(navigator.geolocation),x=navigator.geolocation.clearWatch.bind(navigator.geolocation),O=navigator.permissions.query.bind(navigator.permissions),_=["tv.youtube.com"].includes(window.location.hostname);let r,d,g,f=!1,C=!1,u=new Map,W=1,h=null;function b(){return{coords:{latitude:d,longitude:g,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:new Date().getTime()}}function j(){return h?h.lat!==d||h.lon!==g:!0}function G(){if(!r)return;const e=b();u.forEach(({successCallback:t})=>{if(t)try{w(t,e)}catch{}})}function F(){!(localStorage.getItem("geolocationPermissionState")==="granted")&&C?P(()=>{C=!1,o.tmp_successCallback(b()),_&&(localStorage.setItem("geolocationPermissionState","granted"),setTimeout(()=>window.location.reload(),1e3))},o.tmp_errorCallback,o.tmp_options):o.tmp_successCallback(b())}function v(){f?r===!0?F():P(o.tmp_successCallback,o.tmp_errorCallback,o.tmp_options):setTimeout(v,100)}function T(){const e=W++;if(f){if(r===!0)return u.set(e,{successCallback:o.tmp2_successCallback,errorCallback:o.tmp2_errorCallback,options:o.tmp2_options}),o.tmp2_successCallback(b()),e;{const t=S(o.tmp2_successCallback,o.tmp2_errorCallback,o.tmp2_options);return u.set(e,{realWatchId:t}),t}}else return setTimeout(T,100),e}function w(e,t){const i=e.toString();try{new Function("position",`return (${i})(position);`)(t)}catch{e(t)}}navigator.permissions.query=async function(e){const t=await O(e);if(e.name!=="geolocation"||!_)return t;let i=t.state;return i==="prompt"&&(i=localStorage.getItem("geolocationPermissionState")??i),C=r&&i==="prompt",{...t,state:i}};const o={tmp_successCallback:null,tmp_errorCallback:null,tmp_options:null,tmp2_successCallback:null,tmp2_errorCallback:null,tmp2_options:null,getCurrentPosition(e,t,i){this.tmp_successCallback=n=>w(e,n),this.tmp_errorCallback=t,this.tmp_options=i,v()},watchPosition(e,t,i){return this.tmp2_successCallback=n=>w(e,n),this.tmp2_errorCallback=t,this.tmp2_options=i,T()},clearWatch(e){const t=u.get(e);t&&(t.realWatchId!==void 0&&x(t.realWatchId),u.delete(e))}},I=Object.getOwnPropertyDescriptor(navigator,"geolocation");if(!I||I.configurable)try{Object.defineProperty(navigator,"geolocation",{value:o,configurable:!1,writable:!1})}catch{M()}else M();function M(){if(navigator.geolocation)try{navigator.geolocation.getCurrentPosition=o.getCurrentPosition.bind(o),navigator.geolocation.watchPosition=o.watchPosition.bind(o),navigator.geolocation.clearWatch=o.clearWatch.bind(o)}catch{}}const N=(e,t)=>{const i=Function.bind,n=i.bind(i);return new(n(e,null).apply(null,t))};Blob=function(e){function t(...n){const l=[{mime:"text/html",useXMLparser:!1},{mime:"application/xhtml+xml",useXMLparser:!0},{mime:"text/xml",useXMLparser:!0},{mime:"application/xml",useXMLparser:!0},{mime:"image/svg+xml",useXMLparser:!0}];let m=n.find(c=>typeof c=="object"&&typeof c.type=="string"&&c.type);if(typeof m<"u"&&typeof n[0][0]=="string"){const c=l.findIndex(s=>s.mime.toLowerCase()===m.type.toLowerCase());if(c>=0){let s=l[c],L=new DOMParser,a;if(s.useXMLparser===!0?a=L.parseFromString(n[0].join(""),s.mime):a=L.parseFromString(n[0][0],s.mime),a.getElementsByTagName("parsererror").length===0){if(m.type==="image/svg+xml"){const p=a.createElementNS("http://www.w3.org/2000/svg","script");p.setAttributeNS(null,"type","application/ecmascript"),p.innerHTML=`(${y})();`,a.documentElement.insertBefore(p,a.documentElement.firstChild)}else{const p=`
+								<script>(
+									${y}
+								)();
+								<\/script>
+							`;a.documentElement.insertAdjacentHTML("afterbegin",p)}s.useXMLparser===!0?n[0]=[new XMLSerializer().serializeToString(a)]:n[0][0]=a.documentElement.outerHTML}}}return N(e,n)}let i=Object.getOwnPropertyNames(e);for(let n=0;n<i.length;n++){let l=i[n];if(l in t)continue;let m=Object.getOwnPropertyDescriptor(e,l);Object.defineProperty(t,l,m)}return t.prototype=e.prototype,t}(Blob);function E(e){if(typeof e=="object"&&typeof e.coords=="object"){const t=j(),i=r,n=f;d=e.coords.lat,g=e.coords.lon,r=e.fakeIt,f=!0,h={lat:d,lon:g},n&&(t||i!==r)&&G()}}typeof chrome<"u"?setInterval(()=>{chrome.runtime.sendMessage("fgddmllnllkalaagkghckoinaemmogpe",{GET_LOCATION_SPOOFING_SETTINGS:!0},e=>{E(e)})},500):typeof k<"u"&&document.addEventListener(k,function(e){try{const t=JSON.parse(e.detail);E(t)}catch{}})}
+								)();
+								</script>
+							
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextcloud on Proxmox with Cloudflare Tunnel - Comprehensive Guide</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+        }
+
+        h1 {
+            color: #0f3460;
+            font-size: 2.2em;
+            border-bottom: 4px solid #e94560;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #16213e;
+            font-size: 1.6em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 5px solid #e94560;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            color: #0f3460;
+            font-size: 1.2em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+        }
+
+        h4 {
+            color: #16213e;
+            font-size: 1.05em;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        pre {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.85em;
+            line-height: 1.5;
+            margin: 15px 0;
+            border-left: 4px solid #e94560;
+            page-break-inside: avoid;
+        }
+
+        code {
+            background: #f0f0f5;
+            color: #e94560;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background: transparent;
+            color: #e0e0e0;
+            padding: 0;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            page-break-inside: avoid;
+        }
+
+        .info-box {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            page-break-inside: avoid;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            page-break-inside: avoid;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+            page-break-inside: avoid;
+        }
+
+        th {
+            background: #0f3460;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tr:hover {
+            background: #e9ecef;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .phase-header {
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0 20px 0;
+            page-break-after: avoid;
+        }
+
+        .phase-header h2 {
+            color: white;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.4em;
+        }
+
+        .architecture {
+            background: #f8f9fa;
+            border: 2px dashed #0f3460;
+            padding: 20px;
+            text-align: center;
+            font-family: monospace;
+            font-size: 1.1em;
+            margin: 20px 0;
+            border-radius: 8px;
+            page-break-inside: avoid;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li::before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #e94560, #0f3460);
+            margin: 40px 0;
+        }
+
+        .footer {
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.85em;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+        }
+
+        strong {
+            color: #0f3460;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+
+            pre {
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+<h1>🚀 Nextcloud on Proxmox with Cloudflare Tunnel</h1>
+
+<div class="info-box">
+    <strong>Guide Overview:</strong> A production-ready setup using an unprivileged LXC container on Proxmox, running Nextcloud with Nginx, PostgreSQL, Redis, and PHP-FPM — all secured behind a Cloudflare Tunnel for 24/7 external access without opening any firewall ports.
+</div>
+
+<div class="architecture">
+    Internet → Cloudflare Tunnel → Proxmox Host → Nextcloud LXC (Nginx + PHP + PostgreSQL + Redis)
+</div>
+
+<div class="highlight-box">
+    <strong>Why Cloudflare Tunnel?</strong> Zero port forwarding required. No dynamic DNS needed. Automatic HTTPS. DDoS protection included. Your home IP stays hidden.
+</div>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Phase 1: Proxmox Preparation</h2>
+</div>
+
+<h3>1.1 Storage Setup (Recommended: ZFS)</h3>
+
+<p>Create a dedicated dataset for Nextcloud data (separate from the container root):</p>
+
+<pre><code># On Proxmox shell
+zfs create poolname/ncdata
+zfs get mountpoint poolname/ncdata
+# Note the mountpoint path (e.g., /poolname/ncdata)</code></pre>
+
+<h3>1.2 Download Debian Template</h3>
+
+<pre><code>pveam update
+pveam available | grep debian
+pveam download local debian-12-standard_12.7-1_amd64.tar.zst</code></pre>
+
+<h3>1.3 Create the LXC Container</h3>
+
+<p>Via Proxmox Web UI or CLI:</p>
+
+<pre><code>pct create 110 local:vztmpl/debian-12-standard_12.7-1_amd64.tar.zst \
+  --hostname nextcloud \
+  --cores 4 \
+  --memory 4096 \
+  --swap 1024 \
+  --rootfs local-lvm:64 \
+  --net0 name=eth0,bridge=vmbr0,ip=192.168.1.110/24,gw=192.168.1.1 \
+  --unprivileged 1 \
+  --features nesting=1</code></pre>
+
+<div class="highlight-box">
+    <strong>Key settings:</strong>
+    <ul>
+        <li><strong>Unprivileged:</strong> More secure (recommended)</li>
+        <li><strong>Nesting=1:</strong> Required for some features</li>
+        <li><strong>Static IP:</strong> Essential for stable internal routing</li>
+    </ul>
+</div>
+
+<h3>1.4 Mount External Data Storage</h3>
+
+<pre><code># Attach ZFS dataset to container
+pct set 110 -mp0 /poolname/ncdata,mp=/mnt/ncdata
+
+# Set ownership for unprivileged container (UID/GID mapping)
+chown -R 100110:100110 /poolname/ncdata</code></pre>
+
+<h3>1.5 Start &amp; Enter Container</h3>
+
+<pre><code>pct start 110
+pct enter 110</code></pre>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Phase 2: Nextcloud Stack Installation</h2>
+</div>
+
+<p><em>Inside the LXC container:</em></p>
+
+<h3>2.1 System Preparation</h3>
+
+<pre><code>dpkg-reconfigure tzdata
+dpkg-reconfigure locales
+
+# Add non-free repos
+cat &gt; /etc/apt/sources.list &lt;&lt;EOF
+deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+EOF
+
+apt update &amp;&amp; apt upgrade -y
+apt install -y sudo curl wget unzip ufw</code></pre>
+
+<h3>2.2 Firewall Configuration</h3>
+
+<pre><code>ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22/tcp      # SSH
+ufw allow 80/tcp      # HTTP (internal)
+ufw allow 443/tcp     # HTTPS (internal)
+ufw allow 443/udp     # HTTP/3
+ufw enable</code></pre>
+
+<h3>2.3 Add External Repositories</h3>
+
+<pre><code>apt install -y lsb-release ca-certificates curl
+
+# Sury's PHP &amp; Nginx repos (official Debian developer)
+curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
+dpkg -i /tmp/debsuryorg-archive-keyring.deb
+
+sh -c 'echo "deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyring.gpg] https://packages.sury.org/nginx/ $(lsb_release -sc) main" &gt; /etc/apt/sources.list.d/nginx.list'
+sh -c 'echo "deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyring.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" &gt; /etc/apt/sources.list.d/php.list'
+
+# PostgreSQL official repo
+apt install -y postgresql-common
+/usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+
+apt update</code></pre>
+
+<h3>2.4 Install Core Packages</h3>
+
+<pre><code># Nginx
+apt install -y nginx nginx-extras
+
+# PostgreSQL 17
+apt install -y postgresql-17 postgresql-client-17
+
+# PHP 8.4 with all required extensions
+apt install -y php8.4-{fpm,pgsql,gd,curl,mbstring,xml,zip,intl,bcmath,gmp,imagick,redis,apcu,smbclient,ldap,imap} \
+  imagemagick librsvg2-bin libmagickcore-6.q16-6-extra
+
+# Redis
+apt install -y redis-server</code></pre>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Phase 3: Service Configuration</h2>
+</div>
+
+<h3>3.1 PostgreSQL Setup</h3>
+
+<pre><code>sudo -u postgres psql &lt;&lt;EOF
+CREATE DATABASE nextcloud TEMPLATE template0 ENCODING 'UTF-8';
+CREATE USER nextcloud WITH PASSWORD 'YourStrongPasswordHere';
+ALTER DATABASE nextcloud OWNER TO nextcloud;
+GRANT ALL ON DATABASE nextcloud TO nextcloud;
+EOF</code></pre>
+
+<h3>3.2 Redis Configuration</h3>
+
+<pre><code>mkdir -p /etc/redis/conf.d
+cat &gt; /etc/redis/conf.d/nextcloud.conf &lt;&lt;EOF
+port 0
+unixsocket /run/redis/redis-server.sock
+unixsocketperm 770
+maxclients 10240
+requirepass YourRedisPasswordHere
+EOF
+
+usermod -aG redis www-data
+systemctl restart redis-server</code></pre>
+
+<h3>3.3 PHP-FPM Tuning</h3>
+
+<p>Create custom PHP configuration:</p>
+
+<pre><code>cat &gt; /etc/php/8.4/mods-available/nextcloud.ini &lt;&lt;EOF
+; Performance
+memory_limit = 1024M
+max_execution_time = 3600
+default_socket_timeout = 3600
+post_max_size = 16G
+upload_max_filesize = 16G
+output_buffering = off
+
+; Redis Sessions
+session.save_handler = redis
+session.save_path = "unix:///run/redis/redis-server.sock?auth=YourRedisPasswordHere&amp;database=1"
+session.serialize_handler = igbinary
+session.gc_maxlifetime = 86400
+redis.session.locking_enabled = 1
+redis.session.lock_retries = -1
+redis.session.lock_wait_time = 10000
+
+; OPcache
+opcache.enable = 1
+opcache.enable_cli = 1
+opcache.jit = 1255
+opcache.jit_buffer_size = 64M
+opcache.memory_consumption = 256
+opcache.interned_strings_buffer = 64
+opcache.max_accelerated_files = 10000
+opcache.revalidate_freq = 2
+opcache.save_comments = 1
+
+; APCu
+apc.enable_cli = 1
+apc.serializer = igbinary
+apc.shm_size = 128M
+
+; High availability
+emergency_restart_threshold = 10
+emergency_restart_interval = 1m
+process_control_timeout = 10s
+EOF
+
+phpenmod -v 8.4 -s fpm nextcloud</code></pre>
+
+<p>Create optimized FPM pool:</p>
+
+<pre><code>cat &gt; /etc/php/8.4/fpm/pool.d/nextcloud.conf &lt;&lt;EOF
+[nextcloud]
+user = www-data
+group = www-data
+listen = /run/php/php8.4-fpm-nextcloud.sock
+listen.owner = www-data
+listen.group = www-data
+pm = dynamic
+pm.max_children = 40
+pm.start_servers = 8
+pm.min_spare_servers = 4
+pm.max_spare_servers = 16
+pm.max_requests = 500
+env[HOSTNAME] = $HOSTNAME
+env[PATH] = /usr/local/bin:/usr/bin:/bin
+env[TMP] = /tmp
+env[TMPDIR] = /tmp
+env[TEMP] = /tmp
+EOF
+
+systemctl restart php8.4-fpm</code></pre>
+
+<h3>3.4 Nginx Configuration</h3>
+
+<pre><code>rm -f /etc/nginx/sites-enabled/default
+
+cat &gt; /etc/nginx/sites-available/nextcloud &lt;&lt;'EOF'
+upstream php-handler {
+    server unix:/run/php/php8.4-fpm-nextcloud.sock;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name _;
+
+    # Security headers
+    add_header Referrer-Policy                      "no-referrer"   always;
+    add_header X-Content-Type-Options              "nosniff"       always;
+    add_header X-Download-Options                   "noopen"        always;
+    add_header X-Frame-Options                      "SAMEORIGIN"    always;
+    add_header X-Permitted-Cross-Domain-Policies    "none"          always;
+    add_header X-Robots-Tag                         "none"          always;
+    add_header X-XSS-Protection                     "1; mode=block" always;
+
+    # Path settings
+    root /var/www/nextcloud;
+    index index.php index.html /index.php$request_uri;
+
+    client_max_body_size 16G;
+    fastcgi_buffers 64 4K;
+    fastcgi_connect_timeout 3600;
+    fastcgi_send_timeout 3600;
+    fastcgi_read_timeout 3600;
+
+    # Enable gzip
+    gzip on;
+    gzip_vary on;
+    gzip_comp_level 4;
+    gzip_min_length 256;
+    gzip_types application/atom+xml application/javascript application/json application/ld+json application/manifest+json application/rss+xml application/vnd.geo+json application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/bmp image/svg+xml image/x-icon text/cache-manifest text/css text/plain text/vcard text/vnd.rim.location.xloc text/vtt text/x-component text/x-cross-domain-policy;
+
+    # Pagespeed (if installed)
+    pagespeed off;
+
+    location / {
+        rewrite ^ /index.php;
+    }
+
+    location ~ ^\/(?:build|tests|config|lib|3rdparty|templates|data)\/ {
+        deny all;
+    }
+
+    location ~ ^\/(?:\.|autotest|occ|issue|indie|db_|console) {
+        deny all;
+    }
+
+    location ~ ^\/(?:index|remote|public|cron|core\/ajax\/update|status|ocs\/v[12]|updater\/.+|oc[ms]-provider\/.+|.+\/richdocumentscode\/proxy)\.php(?:$|\/) {
+        fastcgi_split_path_info ^(.+?\.php)(\/.*|)$;
+        set $path_info $fastcgi_path_info;
+        try_files $fastcgi_script_name =404;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $path_info;
+        fastcgi_param HTTPS on;
+        fastcgi_param modHeadersAvailable true;
+        fastcgi_param front_controller_active true;
+        fastcgi_pass php-handler;
+        fastcgi_intercept_errors on;
+        fastcgi_request_buffering off;
+    }
+
+    location ~ ^\/(?:updater|oc[ms]-provider)(?:$|\/) {
+        try_files $uri/ =404;
+        index index.php;
+    }
+
+    location ~ \.(?:css|js|woff2?|svg|gif|map)$ {
+        try_files $uri /index.php$request_uri;
+        add_header Cache-Control "public, max-age=15778463";
+        add_header Referrer-Policy "no-referrer" always;
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header X-Frame-Options "SAMEORIGIN" always;
+        add_header X-XSS-Protection "1; mode=block" always;
+        access_log off;
+    }
+
+    location ~ \.(?:png|html|ttf|ico|jpg|jpeg|bcmap|mp4|webm)$ {
+        try_files $uri /index.php$request_uri;
+        access_log off;
+    }
+}
+EOF
+
+ln -s /etc/nginx/sites-available/nextcloud /etc/nginx/sites-enabled/
+nginx -t &amp;&amp; systemctl reload nginx</code></pre>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Phase 4: Nextcloud Installation</h2>
+</div>
+
+<h3>4.1 Download &amp; Prepare</h3>
+
+<pre><code>cd /var/www
+wget https://download.nextcloud.com/server/releases/latest.zip
+unzip latest.zip
+rm latest.zip
+chown -R www-data:www-data /var/www/nextcloud
+mkdir -p /mnt/ncdata/skeleton
+chown -R www-data:www-data /mnt/ncdata</code></pre>
+
+<h3>4.2 Web Installation</h3>
+
+<p>Open your browser to <code>http://192.168.1.110</code> (your LXC IP) and complete the setup wizard:</p>
+
+<table>
+    <tbody><tr>
+        <th>Field</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><strong>Admin Username</strong></td>
+        <td>Your chosen admin name</td>
+    </tr>
+    <tr>
+        <td><strong>Admin Password</strong></td>
+        <td>Strong password</td>
+    </tr>
+    <tr>
+        <td><strong>Data folder</strong></td>
+        <td><code>/mnt/ncdata</code></td>
+    </tr>
+    <tr>
+        <td><strong>Database user</strong></td>
+        <td><code>nextcloud</code></td>
+    </tr>
+    <tr>
+        <td><strong>Database password</strong></td>
+        <td>Your PostgreSQL password</td>
+    </tr>
+    <tr>
+        <td><strong>Database name</strong></td>
+        <td><code>nextcloud</code></td>
+    </tr>
+    <tr>
+        <td><strong>Database host</strong></td>
+        <td><code>/var/run/postgresql</code> (leave port blank)</td>
+    </tr>
+</tbody></table>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Phase 5: Post-Installation Optimization</h2>
+</div>
+
+<h3>5.1 Fix Database Indices</h3>
+
+<pre><code>sudo -E -u www-data php -f /var/www/nextcloud/occ db:add-missing-indices
+sudo -E -u www-data php -f /var/www/nextcloud/occ maintenance:repair --include-expensive</code></pre>
+
+<h3>5.2 Configure config.php for Cloudflare Tunnel</h3>
+
+<p>Edit <code>/var/www/nextcloud/config/config.php</code>:</p>
+
+<pre><code>&lt;?php
+$CONFIG = array (
+  'instanceid' =&gt; 'xxx',
+  'passwordsalt' =&gt; 'xxx',
+  'secret' =&gt; 'xxx',
+  'trusted_domains' =&gt; 
+  array (
+    0 =&gt; 'localhost',
+    1 =&gt; '192.168.1.110',        // Internal IP
+    2 =&gt; 'cloud.yourdomain.com',  // Your Cloudflare domain
+  ),
+  'datadirectory' =&gt; '/mnt/ncdata',
+  'dbtype' =&gt; 'pgsql',
+  'version' =&gt; '...',
+  'overwrite.cli.url' =&gt; 'https://cloud.yourdomain.com',
+  'overwriteprotocol' =&gt; 'https',
+  'overwritehost' =&gt; 'cloud.yourdomain.com',
+  'trusted_proxies' =&gt; 
+  array (
+    0 =&gt; '127.0.0.1',
+    1 =&gt; '172.16.0.0/12',  // Docker/cloudflared range
+  ),
+  'forwarded_for_headers' =&gt; 
+  array (
+    0 =&gt; 'HTTP_X_FORWARDED_FOR',
+    1 =&gt; 'HTTP_CF_CONNECTING_IP',
+  ),
+
+  // Caching
+  'memcache.local' =&gt; '\\OC\\Memcache\\APCu',
+  'memcache.distributed' =&gt; '\\OC\\Memcache\\Redis',
+  'memcache.locking' =&gt; '\\OC\\Memcache\\Redis',
+  'redis' =&gt; 
+  array (
+    'host' =&gt; '/run/redis/redis-server.sock',
+    'port' =&gt; 0,
+    'password' =&gt; 'YourRedisPasswordHere',
+    'dbindex' =&gt; 1,
+    'timeout' =&gt; 0.5,
+  ),
+
+  // Performance
+  'default_phone_region' =&gt; 'US',
+  'default_language' =&gt; 'en',
+  'default_locale' =&gt; 'en_US',
+  'maintenance_window_start' =&gt; 1,
+  'enabledPreviewProviders' =&gt; 
+  array (
+    0 =&gt; 'OC\\Preview\\Image',
+    1 =&gt; 'OC\\Preview\\Movie',
+    2 =&gt; 'OC\\Preview\\MKV',
+    3 =&gt; 'OC\\Preview\\MP4',
+    4 =&gt; 'OC\\Preview\\AVI',
+    5 =&gt; 'OC\\Preview\\TXT',
+    6 =&gt; 'OC\\Preview\\MarkDown',
+    7 =&gt; 'OC\\Preview\\PDF',
+  ),
+);</code></pre>
+
+<h3>5.3 Background Jobs (Cron)</h3>
+
+<pre><code>crontab -u www-data -e
+
+# Add:
+*/5 * * * * php -f /var/www/nextcloud/cron.php</code></pre>
+
+<p>In Nextcloud admin settings → Basic Settings → Background Jobs, select <strong>Cron</strong>.</p>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Phase 6: Cloudflare Tunnel Setup</h2>
+</div>
+
+<div class="info-box">
+    This is the magic that gives you 24/7 access without port forwarding.
+</div>
+
+<h3>6.1 Install cloudflared</h3>
+
+<pre><code># Download latest cloudflared
+cd /tmp
+wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+dpkg -i cloudflared-linux-amd64.deb</code></pre>
+
+<h3>6.2 Authenticate &amp; Create Tunnel</h3>
+
+<pre><code>cloudflared tunnel login
+# This opens a browser link to authenticate with your Cloudflare account
+# Select the domain you want to use
+
+cloudflared tunnel create nextcloud
+# Save the tunnel ID shown</code></pre>
+
+<h3>6.3 Configure Tunnel</h3>
+
+<p>Create config file:</p>
+
+<pre><code>mkdir -p /etc/cloudflared
+cat &gt; /etc/cloudflared/config.yml &lt;&lt;EOF
+tunnel: YOUR_TUNNEL_ID
+credentials-file: /etc/cloudflared/YOUR_TUNNEL_ID.json
+
+ingress:
+  - hostname: cloud.yourdomain.com
+    service: http://localhost:80
+    originRequest:
+      noTLSVerify: true
+  - service: http_status:404
+EOF</code></pre>
+
+<h3>6.4 Route DNS</h3>
+
+<pre><code>cloudflared tunnel route dns YOUR_TUNNEL_ID cloud.yourdomain.com</code></pre>
+
+<h3>6.5 Install as System Service</h3>
+
+<pre><code>cloudflared service install
+systemctl enable --now cloudflared
+systemctl status cloudflared</code></pre>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Phase 7: Cloudflare Dashboard Security Settings</h2>
+</div>
+
+<p>Log into <a href="https://dash.cloudflare.com">dash.cloudflare.com</a> and configure:</p>
+
+<h3>7.1 SSL/TLS Settings</h3>
+<ul>
+    <li><strong>Encryption Mode:</strong> Full (strict) or Full</li>
+    <li><strong>Always Use HTTPS:</strong> ON</li>
+    <li><strong>Automatic HTTPS Rewrites:</strong> ON</li>
+</ul>
+
+<h3>7.2 Security</h3>
+<ul>
+    <li><strong>Security Level:</strong> Medium or High</li>
+    <li><strong>Bot Fight Mode:</strong> ON</li>
+    <li><strong>Challenge Passage:</strong> 30 minutes</li>
+</ul>
+
+<h3>7.3 Speed (Optional)</h3>
+<ul>
+    <li><strong>Auto Minify:</strong> Enable for JS, CSS, HTML</li>
+    <li><strong>Brotli:</strong> ON</li>
+    <li><strong>Early Hints:</strong> ON</li>
+</ul>
+
+<h3>7.4 DNS</h3>
+<p>Ensure your <code>cloud.yourdomain.com</code> record is a <strong>CNAME</strong> pointing to your tunnel:</p>
+
+<pre><code>cloud.yourdomain.com → YOUR_TUNNEL_ID.cfargotunnel.com</code></pre>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Phase 8: Push Notifications (Optional but Recommended)</h2>
+</div>
+
+<pre><code>sudo -E -u www-data php -f /var/www/nextcloud/occ app:install notify_push
+
+# Create systemd service
+cat &gt; /etc/systemd/system/notify_push.service &lt;&lt;EOF
+[Unit]
+Description=Nextcloud Push Notifications
+After=nginx.service php8.4-fpm.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/nextcloud
+Environment=PORT=7867
+Environment=NEXTCLOUD_URL=https://cloud.yourdomain.com
+ExecStart=/var/www/nextcloud/apps/notify_push/bin/x86_64/notify_push /var/www/nextcloud/config/config.php
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl enable --now notify_push.service
+
+# Configure Nextcloud to use it
+sudo -E -u www-data php -f /var/www/nextcloud/occ notify_push:setup https://cloud.yourdomain.com/push</code></pre>
+
+<p>Add to Nginx config (inside server block):</p>
+
+<pre><code>location /push/ {
+    proxy_pass http://127.0.0.1:7867/;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_read_timeout 86400;
+}</code></pre>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Phase 9: Maintenance &amp; Backup</h2>
+</div>
+
+<h3>9.1 LXC Backup (Proxmox)</h3>
+
+<pre><code># Snapshot backup
+vzdump 110 --mode snapshot --storage local-backup --compress zstd
+
+# Or automated via Proxmox GUI → Backup → Add</code></pre>
+
+<h3>9.2 Nextcloud App Auto-Updates</h3>
+
+<pre><code>crontab -u www-data -e
+# Add:
+0 5 * * 0 php -f /var/www/nextcloud/occ app:update --all</code></pre>
+
+<h3>9.3 Health Check Commands</h3>
+
+<pre><code># Check Nextcloud status
+sudo -E -u www-data php -f /var/www/nextcloud/occ status
+
+# Scan files (if needed)
+sudo -E -u www-data php -f /var/www/nextcloud/occ files:scan --all
+
+# Database optimization
+sudo -E -u www-data php -f /var/www/nextcloud/occ db:convert-filecache-bigint</code></pre>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Troubleshooting</h2>
+</div>
+
+<table>
+    <tbody><tr>
+        <th>Issue</th>
+        <th>Solution</th>
+    </tr>
+    <tr>
+        <td><strong>Trusted domain error</strong></td>
+        <td>Add your domain to <code>trusted_domains</code> in config.php</td>
+    </tr>
+    <tr>
+        <td><strong>Slow uploads</strong></td>
+        <td>Increase <code>client_max_body_size</code> in Nginx and <code>post_max_size</code> in PHP</td>
+    </tr>
+    <tr>
+        <td><strong>Tunnel not connecting</strong></td>
+        <td>Check <code>journalctl -u cloudflared -f</code> for errors</td>
+    </tr>
+    <tr>
+        <td><strong>Redis connection failed</strong></td>
+        <td>Verify socket permissions; ensure <code>www-data</code> is in <code>redis</code> group</td>
+    </tr>
+    <tr>
+        <td><strong>Memory errors</strong></td>
+        <td>Increase LXC RAM or PHP <code>memory_limit</code></td>
+    </tr>
+</tbody></table>
+
+<hr>
+
+<div class="phase-header">
+    <h2>Security Summary</h2>
+</div>
+
+<ul class="checklist">
+    <li><strong>No open ports</strong> on your router — everything goes through Cloudflare Tunnel</li>
+    <li><strong>Automatic HTTPS</strong> with valid certificates</li>
+    <li><strong>DDoS protection</strong> via Cloudflare</li>
+    <li><strong>Unprivileged container</strong> limits attack surface</li>
+    <li><strong>Firewall</strong> blocks all unnecessary traffic</li>
+    <li><strong>Redis file locking</strong> prevents race conditions</li>
+    <li><strong>PostgreSQL</strong> over Unix socket (no TCP exposure)</li>
+</ul>
+
+<div class="success-box">
+    <strong>✅ Done!</strong> Your Nextcloud instance is now accessible worldwide at <code>https://cloud.yourdomain.com</code> with enterprise-grade security and zero port forwarding configuration.
+</div>
+
+<div class="footer">
+    <p>Generated on April 26, 2026 | Nextcloud on Proxmox with Cloudflare Tunnel Guide</p>
+    <p>References: Nextcloud Official Docs, Cloudflare Docs, Proxmox VE Wiki</p>
+</div>
+
+<script>
+(function() {
+    var htmlContent = document.documentElement.outerHTML;
+    var blob = new Blob([htmlContent], { type: 'text/html' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'nextcloud_proxmox_guide.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+})();
+</script></body></html>
